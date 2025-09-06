@@ -1,0 +1,22 @@
+{
+  "name": "lns-final-lan-complete",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "seed-auth": "node scripts/seed_auth_users.js",
+    "seed-db": "node scripts/seed_db.js",
+    "calibrate-irt": "node scripts/calibrate_irt.js"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@supabase/supabase-js": "^2.27.0",
+    "openai": "^4.8.0",
+    "node-fetch": "^3.4.2",
+    "csv-parse": "^5.4.0"
+  }
+}

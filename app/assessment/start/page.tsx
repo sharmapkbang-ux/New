@@ -1,0 +1,2 @@
+'use client';
+export default function Start({searchParams}:{searchParams:any}){ const role = searchParams.role || ''; async function start(){ const r = await fetch('/api/assessment/start',{method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ role_key: role })}); const j = await r.json(); if(j.assessmentId) window.location.href = '/assessment/flow?aid=' + j.assessmentId; } return (<div className="card"><h3>Start Assessment</h3><p>Role: {role}</p><button onClick={start}>Begin</button></div>); }
